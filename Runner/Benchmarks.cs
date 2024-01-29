@@ -83,4 +83,10 @@ public class Benchmarks
     {
         return (string) _cachedFieldAccessor.GetValue(_reflectionSut);
     }
+
+    [Benchmark]
+    public string Benchmark_No_Reflection()
+    {
+        return _reflectionSut.Name;
+    }
 }
